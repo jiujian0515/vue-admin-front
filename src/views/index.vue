@@ -1103,18 +1103,11 @@
 </template>
 
 <script setup name="Index">
-  import { getUserById } from '@/api/system/user';
   const version = ref('3.9.2');
 
   function goTarget(url) {
     window.open(url, '__blank');
   }
-  function getUserInfo() {
-    getUserById(1).then((res) => {
-      console.log(res);
-    });
-  }
-  getUserInfo();
 </script>
 
 <style scoped lang="scss">

@@ -18,14 +18,6 @@ export function getUser (userId) {
   })
 }
 
-// 根据用户ID查询用户
-export function getUserById (userId) {
-  return request({
-    url: '/system/user/name?userId=' + parseStrEmpty(userId),
-    method: 'get'
-  })
-}
-
 // 新增用户
 export function addUser (data) {
   return request({
