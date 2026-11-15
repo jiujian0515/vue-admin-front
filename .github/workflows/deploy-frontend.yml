@@ -15,7 +15,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm' # 开启 npm 缓存，加速后续构建
 
       # 因为我们在 Dockerfile 里已经做了 npm install 和 build，
       # 所以这里其实不需要在宿主机上单独跑一遍 npm build，
