@@ -60,6 +60,10 @@
     <!--  底部  -->
     <div class="el-login-footer">
       <span>{{ footerContent }}</span>
+      <template v-if="icp">
+        <span class="icp-divider">|</span>
+        <a class="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">{{ icp }}</a>
+      </template>
     </div>
   </div>
 </template>
@@ -73,6 +77,7 @@ import defaultSettings from '@/settings'
 
 const title = import.meta.env.VITE_APP_TITLE
 const footerContent = defaultSettings.footerContent
+const icp = defaultSettings.icp
 const userStore = useUserStore()
 const route = useRoute()
 const router = useRouter()
@@ -223,6 +228,17 @@ getCookie()
   font-family: Arial;
   font-size: 12px;
   letter-spacing: 1px;
+  .icp-divider {
+    margin: 0 6px;
+    opacity: 0.6;
+  }
+  .icp-link {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 .login-code-img {
   height: 40px;

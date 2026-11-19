@@ -62,6 +62,11 @@ export default {
   /**
    * 底部版权文本内容
    */
-  footerContent: 'Copyright © 2018-2026 vue-admin. All Rights Reserved.'
+  footerContent: 'Copyright © 2018-2026 vue-admin. All Rights Reserved.',
+
+  /**
+   * 备案号，为空时不显示
+   */
+  icp: '湘ICP备2026055681号-1'
 }
 
